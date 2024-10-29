@@ -66,6 +66,68 @@ body {
     min-height: 100vh;
 }
 
+.game{
+    position: relative;
+    display: grid;
+    grid-template-columns: (repeat(2,1fr));
+    grid-template-areas: "paper scissors"
+                         "rock rock";
+    place-items: center;
+    height: 30rem;
+    padding-top: 4rem;
+}
+
+.game::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 28%;
+    top: 35%;
+    background: url("./images/bg-triangle.svg") no-repeat;
+}
+
+.choice-btn[data-choice="paper"] {
+    grid-area: paper;
+}
+
+.choice-btn[data-choice="scissors"] {
+    grid-area: scissors;
+}
+
+.choice-btn[data-choice="rock"] {
+    grid-area: rock;
+}
+
+.choice-btn{
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.choice {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.choice.paper{
+
+}  
+
+.choice.scissors{
+
+}
+
+.choice.rock{
+
+}
+
 .attribution { 
     font-size: 11px; 
     text-align: center; 
