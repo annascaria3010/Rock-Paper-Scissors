@@ -122,7 +122,8 @@ body {
     box-shadow: inset 0 0.5rem var(--shadow-light);
 }
 
-.choice::before{
+.choice::before,
+.choice::after{
     content: "";
     position: absolute;
     left: -15%;
@@ -130,8 +131,22 @@ body {
     width: 130%;
     height: 130%;
     border-radius: 50%;
-    z-index: -1;
-    
+    z-index: -1;  
+}
+
+.choice::after{
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.choice-btn:focus .choice::after{
+    opacity: 1;
+    box-shadow: 0 0 0 2rem #223351;
+    z-index: -2;
+}
+
+.choice img{
+    transform: scale(1.5);
 }
 
 .choice.paper::before{
@@ -147,6 +162,27 @@ body {
 .choice.rock::before{
     background: linear-gradient(to bottom, var(--rock-1),var(--rock-2));
     box-shadow: 0 0.5rem var(--shadow-med), 0 0.5rem var(--rock-2);
+}
+
+.rules-btn{
+    position:absolute;
+    bottom: 2rem;
+    right:2rem;
+    background: none;
+    outline: none;
+    border: 2px solid var(--outline);
+    border-radius: 0.6rem;
+    color: var(--light-text);
+    padding: 0.6rem 2.5rem;
+    font-family: inherit;
+    text-transform: inherit;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+}
+
+.rules-btn:focus{
+    border: 2px solid #ffffff;
 }
 
 .attribution { 
