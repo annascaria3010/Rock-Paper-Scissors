@@ -185,6 +185,53 @@ body {
     border: 2px solid #ffffff;
 }
 
+.modal {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    background: var(--shadow-medium);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.modal_container{
+    background: #ffffff ;
+  
+    border-radius: 0.5rem;
+}
+
+.modal_header{
+    display: flex;
+    justify-content: space-between;
+    padding:  0.5rem 2rem 1rem;
+}
+
+.close-btn{
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.modal_heading{
+    font-size: 1.5rem;
+    color: var(--dark-text);
+}
+
+.rules-img{
+    padding: 2rem 4rem;
+}
+
+.show-modal{
+    opacity: 1;
+    pointer-events: initial;
+}
+
 .attribution { 
     font-size: 11px; 
     text-align: center; 
