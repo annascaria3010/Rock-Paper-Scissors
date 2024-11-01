@@ -222,7 +222,7 @@ body {
     outline: none;
     border: 2px solid transparent;
     border-radius: 0.6rem;
-    
+    color: var(--dark-text);
 }
 
 .rules-btn{
