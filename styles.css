@@ -205,6 +205,26 @@ body {
     grid-area: ai-picked;
 }
 
+
+.results_winner{
+    grid-area: results-winner;
+    display: grid;
+    place-items: center;
+}
+
+.results_text{
+    font-size:3.5rem;
+    padding-bottom: 1.5rem;;
+}
+
+.play-again{
+    background: #ffffff;
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 0.6rem;
+    
+}
+
 .rules-btn{
     position:absolute;
     bottom: 2rem;
