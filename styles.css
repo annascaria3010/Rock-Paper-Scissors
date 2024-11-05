@@ -177,7 +177,7 @@ body {
 .results_heading{
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
-    padding: 4rem 0 8rem;
+    padding: 4rem 0.8rem;
 }
 
 .results_result{
@@ -205,9 +205,28 @@ body {
     grid-area: ai-picked;
 }
 
+.results.show-winner{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "you-title . ai-title"
+                         "you-picked result-winner ai-picked";
+}
+
+.winner .choice::after {
+    box-shadow: 0 0 0 40px #293251, 0 0 0 80px #232c4b, 0 0 0 130px #1e2949;
+    animation: winner 1s ease forwards;
+}
+
+@keyframes winner {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 .results_winner{
-    grid-area: results-winner;
+    grid-area: result-winner;
     display: grid;
     place-items: center;
 }
@@ -223,7 +242,19 @@ body {
     border: 2px solid transparent;
     border-radius: 0.6rem;
     color: var(--dark-text);
+    padding: 0.6rem 3.5rem;
+    font-family: inherit;
+    text-transform: inherit;
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
 }
+
+.play-again:focus {
+    border:2px solid var(--outline);
+}
+
+
 
 .rules-btn{
     position:absolute;
