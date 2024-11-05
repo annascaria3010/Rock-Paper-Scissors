@@ -46,7 +46,7 @@ body {
 
 
 
-.score{
+.score, .myscore, .housescore{
     background-color: #ffffff;
     display: flex;
     align-items: center;
@@ -58,13 +58,22 @@ body {
     line-height: 1;
 }
 
-.score_title{
+.scores {
+    display:flex;
+    
+}
+
+.myscore {
+    margin-right: 1rem;
+}
+
+.score_title, .my_score_title, .house_score_title {
     color: var(--score-text);
     font-size: 1.1rem;
     letter-spacing: 0.1em;
 }
 
-.score_number{
+.score_number, .my_score_number, .house_score_number{
     font-size: 4rem;
     font-weight: 700;
     color: var(--dark-text);
@@ -203,6 +212,7 @@ body {
 
 .results_result:last-of-type{
     grid-area: ai-picked;
+    justify-content: end;
 }
 
 .results.show-winner{
@@ -212,7 +222,7 @@ body {
 }
 
 .winner .choice::after {
-    box-shadow: 0 0 0 40px #293251, 0 0 0 80px #232c4b, 0 0 0 130px #1e2949;
+    box-shadow: 0 0 0 20px #293251, 0 0 0 40px #232c4b;
     animation: winner 1s ease forwards;
 }
 

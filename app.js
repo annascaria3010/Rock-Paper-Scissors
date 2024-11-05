@@ -23,8 +23,12 @@ const resultWinner = document.querySelector('.results_winner')
 const resultText = document.querySelector('.results_text')
 const playAgainBtn = document.querySelector('.play-again')
 const scoreNumber = document.querySelector(".score_number")
+const myScoreNumber = document.querySelector(".my_score_number")
+const houseScoreNumber = document.querySelector(".house_score_number")
 
-let score =0;
+// let score =0;
+let myscore =0;
+let housescore =0;
 
 choiceButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -66,11 +70,13 @@ function displayWinner(results) {
         if(userWins) {
             resultText.innerText = "you win";
             resultDivs[0].classList.toggle('winner');
-            keepScore(1);
+           // keepScore(1);
+            viewMyScore(1);
         }else if (aiWins) {
             resultText.innerText = "you lose";
             resultDivs[1].classList.toggle('winner');
-            keepScore(-1);
+          //  keepScore(-1);
+            viewHouseScore(1);            
         }else {
             resultText.innerText = "draw";
         }
@@ -84,9 +90,19 @@ function isWinner(results) {
     return results[0].beats === results[1].name;
 }
 
-function keepScore(points) {
-    score += points
-    scoreNumber.innerText = score
+// function keepScore(points) {
+//     score += points
+//     scoreNumber.innerText = score
+// }
+
+function viewMyScore(points) {
+    myscore += points
+    myScoreNumber.innerText = myscore
+}
+
+function viewHouseScore(points) {
+    housescore += points
+    houseScoreNumber.innerText = housescore
 }
 
 playAgainBtn.addEventListener('click', () => {
