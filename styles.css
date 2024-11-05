@@ -17,6 +17,14 @@
     --shadow-medium:#0000004d;
 }
 
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: radial-gradient(at top, var(--bg-gradient-1), var(--bg-gradient-2));
+    min-height: 100vh;
+    text-transform: uppercase;
+    color: var(--light-text);
+}
+
 .container{
     position: relative;
     max-width: 700px;
@@ -60,14 +68,6 @@
     font-size: 4rem;
     font-weight: 700;
     color: var(--dark-text);
-}
-
-body {
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    background: radial-gradient(at top, var(--bg-gradient-1), var(--bg-gradient-2));
-    min-height: 100vh;
-    text-transform: uppercase;
-    color: var(--light-text);
 }
 
 .game{
@@ -251,7 +251,7 @@ body {
 }
 
 .play-again:focus {
-    border:2px solid var(--outline);
+    border: 2px solid var(--outline);
 }
 
 
@@ -292,8 +292,7 @@ body {
 }
 
 .modal_container{
-    background: #ffffff ;
-  
+    background: #ffffff;
     border-radius: 0.5rem;
 }
 
