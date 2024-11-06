@@ -23,6 +23,8 @@ body {
     min-height: 130vh;
     text-transform: uppercase;
     color: var(--light-text);
+    display: block;
+    justify-content: center;
 }
 
 .container{
@@ -35,18 +37,16 @@ body {
 
 @media (max-width: 600px) {
     .container {
-        max-width: 90%; /* Reduce max width for better fit */
-        padding-top: 1.5rem; /* Reduce padding on smaller screens */
+        max-width: 90%; 
+        padding-top: 1.5rem;
     }
 }
 
-/* Media query for very small screens (e.g., under 500px) */
+
 @media (max-width: 500px) {
     .container {
-        max-width: 100%; /* Full width on very small screens */
-        padding-top: 1rem; /* Further reduce padding */
-        padding-left: 2rem; /* Optional: Add horizontal padding */
-        padding-right: 1rem;
+        max-width: 500px; 
+        
     }
 }
 
@@ -74,23 +74,23 @@ body {
     }
   }
 
-.logo img {
+.logo  {
     height: 100%;
     max-width: 100% ;
   }
 
   @media (max-width: 600px) {
-    .logo img {
-        height: 80%; /* Reduce size to 80% on smaller screens */
-        max-width: 80%; /* Optional: control the max width */
+    .logo {
+        height: 90%; /* Reduce size to 80% on smaller screens */
+        max-width: 90%; /* Optional: control the max width */
     }
 }
 
 /* Media query for very small screens (e.g., under 400px) */
-@media (max-width: 400px) {
-    .logo img {
-        height: 40%; /* Further reduce size for very small screens */
-        max-width: 40%; /* Keep max width consistent with height */
+@media (max-width: 500px) {
+    .logo {
+        height: 80%; /* Further reduce size for very small screens */
+        max-width: 80%; /* Keep max width consistent with height */
     }
 }
 
@@ -206,7 +206,7 @@ body {
   }
   
   /* Media query for very small screens (e.g., mobile) */
-  @media (max-width: 450px) {
+  @media (max-width: 500px) {
     .game::before {
         width: 80%;
         height: 70%;
@@ -272,6 +272,26 @@ body {
     border-radius: 50%;
     z-index: -1;  
 }
+@media (max-width: 600px) {
+    .choice::before,
+    .choice::after {
+        left: -10%; /* Adjust position for smaller screens */
+        top: -10%;
+        width: 120%; /* Reduce size to fit smaller screens */
+        height: 120%;
+    }
+}
+
+/* Media query for very small screens (e.g., under 400px) */
+@media (max-width: 500px) {
+    .choice::before,
+    .choice::after {
+        left: -15%; /* Further adjust position */
+        top: -15%;
+        width: 130%; /* Further reduce size for tiny screens */
+        height: 130%;
+    }
+}
 
 .choice::after{
     opacity: 0;
@@ -331,6 +351,23 @@ body {
     letter-spacing: 0.1rem;
     padding: 4rem 0.8rem;
 }
+@media (max-width: 600px) {
+    .results_heading{
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    padding: 4rem 0.8rem;
+}
+}
+
+@media (max-width: 500px) {
+    .results_heading{
+        display: flex;
+        flex-wrap: nowrap;
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+        padding: 2rem 0.4rem;
+}
+}
 
 .results_result{
     min-width: 10rem;
@@ -339,6 +376,22 @@ body {
     border-radius: 50%;
     transform: scale(1.4);
     z-index:-1;
+}
+@media (max-width: 600px) {
+    .results_result {
+        min-width: 8rem; /* Reduce size on smaller screens */
+        min-height: 8rem;
+        transform: scale(1.2); /* Slightly smaller scale */
+    }
+}
+
+/* Media query for very small screens (e.g., under 400px) */
+@media (max-width: 500px) {
+    .results_result {
+        min-width: 6rem; /* Further reduce size for very small screens */
+        min-height: 6rem;
+        transform: scale(1); /* Remove scaling for tiny screens */
+    }
 }
 
 .results_heading:first-of-type {
@@ -388,6 +441,20 @@ body {
     font-size:3.5rem;
     padding-bottom: 1.5rem;;
 }
+@media (max-width: 600px) {
+    .results_text {
+        font-size: 2.5rem; /* Reduce font size for smaller screens */
+        padding-bottom: 1rem; /* Adjust padding */
+    }
+}
+
+/* Media query for very small screens (e.g., under 400px) */
+@media (max-width: 500px) {
+    .results_text {
+        font-size: 1.5rem; /* Further reduce font size */
+        padding-bottom: 0.8rem; /* Adjust padding for very small screens */
+    }
+}
 
 .play-again{
     background: #ffffff;
@@ -401,6 +468,20 @@ body {
     font-size: 1.3rem;
     letter-spacing: 0.1em;
     cursor: pointer;
+}
+@media (max-width: 600px) {
+    .play-again {
+        padding: 0.5rem 2.5rem; /* Reduce padding for smaller screens */
+        font-size: 1.1rem; /* Slightly smaller font size */
+    }
+}
+
+/* Media query for very small screens (e.g., under 400px) */
+@media (max-width: 500px) {
+    .play-again {
+        padding: 0.4rem 1rem; 
+        font-size: 1rem; 
+    }
 }
 
 .play-again:focus {
@@ -464,18 +545,18 @@ body {
     .modal {
         height: 100%;
         width: 100%;
-        padding: 1.5rem; /* Reduce padding on smaller screens */
-        max-width: 90%; /* Adjust max width to fit smaller screens */
+        padding: 1.5rem;
+        max-width: 90%; 
     }
 }
 
-/* Media query for very small screens (e.g., under 500px) */
+
 @media (max-width: 500px) {
     .modal {
         height: 130%;
         width: 130%;
         padding: 1.5rem;
-        max-width: 120%; 
+        max-width: 100%; 
     }
 }
 
@@ -511,17 +592,10 @@ body {
     pointer-events: initial;
 }
 
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
-}
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
-}
-
 .preload *{
     transition: none;
-    
+  
+
 }
 
 .hidden {
