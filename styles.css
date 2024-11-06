@@ -20,7 +20,8 @@
 body {
     font-family: 'Barlow Semi Condensed', sans-serif;
     background: radial-gradient(at top, var(--bg-gradient-1), var(--bg-gradient-2));
-    min-height: 130vh;
+    min-height: 100vh;
+    min-width: 100vw;
     text-transform: uppercase;
     color: var(--light-text);
     display: block;
@@ -45,7 +46,7 @@ body {
 
 @media (max-width: 500px) {
     .container {
-        max-width: 500px; 
+        width: 100vw;
         
     }
 }
@@ -553,9 +554,8 @@ body {
 
 @media (max-width: 500px) {
     .modal {
-        height: 130%;
-        width: 130%;
-        padding: 1.5rem;
+        height: 100vh;
+        width: 100vw;
         max-width: 100%; 
     }
 }
@@ -568,7 +568,7 @@ body {
 .modal_header{
     display: flex;
     justify-content: space-between;
-    padding:  0.5rem 2rem 1rem;
+    padding:  0.5rem 1rem 1rem;
 }
 
 .close-btn{
@@ -584,12 +584,13 @@ body {
 }
 
 .rules-img{
-    padding: 2rem 4rem;
+    padding: 1rem 2rem;
 }
 
 .show-modal{
     opacity: 1;
     pointer-events: initial;
+    
 }
 
 .preload *{
