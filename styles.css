@@ -534,7 +534,7 @@ body {
     height: 100%;
     width: 100%;
     top: 0;
-    left: 0;
+    
     display: grid;
     place-items: center;
     background: var(--shadow-medium);
@@ -543,21 +543,19 @@ body {
     pointer-events: none;
 }
 @media (max-width: 600px) {
-    .modal {
-        height: 100%;
-        width: 100%;
-        padding: 1.5rem;
-        max-width: 90%; 
+    .modal { 
+        /* padding: 1.5rem; */
+        max-width: 100%; 
     }
 }
 
 
 @media (max-width: 500px) {
-    .modal {
+    /* .modal {
         height: 100vh;
         width: 100vw;
         max-width: 100%; 
-    }
+    } */
 }
 
 .modal_container{
